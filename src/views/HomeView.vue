@@ -167,7 +167,18 @@ export default {
   .banner-text {
     text-align: center;
     padding: 0 15px;
-  
+  }
+
+  checkproduct {
+    height: 500px; 
+  }
+
+  .checkproduct .container {
+    align-items: center;
+  }
+
+  .checkproduct .banner-text {
+    text-align: center;
   }
 }
 </style>
