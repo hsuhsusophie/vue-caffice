@@ -3,14 +3,14 @@ import AOS from 'Aos'
 import 'aos/dist/aos.css'
 
 // import { RouterLink, RouterView } from 'vue-router'
-import NavbarComponent from './components/NavbarComponent.vue';
+// import NavbarComponent from './components/NavbarComponent.vue';
 
 
 export default{
   components:{
     // RouterLink,
     // RouterView,
-    NavbarComponent
+    // NavbarComponent
   },
   mounted(){
     AOS.init({
@@ -25,7 +25,7 @@ export default{
 <template>
   <header>
     <div class="wrapper">
-      <NavbarComponent></NavbarComponent>
+      <!-- <NavbarComponent></NavbarComponent> -->
 
       <!-- <nav>
         <RouterLink to="/">Home</RouterLink> |

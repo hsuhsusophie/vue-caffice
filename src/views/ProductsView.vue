@@ -2,7 +2,6 @@
     <LoadingOverlay :active="isLoading" />
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-4 p-4 g-4">
-
         <div class="col" v-for="product in products" :key="product.id">
             <div class="card">
                 <RouterLink :to="`/products/${product.id}`">
