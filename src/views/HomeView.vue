@@ -18,6 +18,7 @@ export default {
 </script>
 
 <template>
+  <div class="wrapper">
   <!-- banner -->
   <header class="home-header my-4 p-4 w-100" :style="{ 'background-image': `url(${imageUrl})` }" data-aos="fade-down">
     <div class="d-flex justify-content-end align-items-end h-100 w-100 ">
@@ -117,8 +118,8 @@ export default {
 
 <!--checkporduct-->
 <div class="checkproduct  w-100" data-aos="fade-down">
-    <div class=" d-flex justify-content-end align-items-end h-100 w-100 ">
-      <div class="ml-auto text-start banner-text mb-4" data-aos="fade-down">
+    <div class=" d-flex justify-content-end align-items-end h-100 w-100 check-banner-text">
+      <div class="ml-auto text-start  mb-4" data-aos="fade-down">
         <h3 class="fw-bold text-light">Caffice</h3>
         <h1 class="text-white mb-2">品味生活，從一杯Caffice開始。</h1>
         <RouterLink to="/products" class="btn btn-outline-light py-2">查看產品</RouterLink>
@@ -126,77 +127,5 @@ export default {
     </div>
   </div>
 
-
+</div>
 </template>
-
-<style>
-.home-header {
-  height: 860px;
-  background-position: center center;
-  background-size: cover;
-}
-
-.intro-heading{
-  border-bottom: 2px solid #000; 
-  display: inline-block; 
-  padding-bottom: 5px;
-  margin-bottom: 10px; 
-}
-
-
-
-.service-item img{
-  object-fit: cover;
-  width: 400px;
-  height: 400px;
-}
-
-.checkproduct{
-  background-image: url(../assets/pics/check.jpg);
-  background-color: rgba(255, 255, 255, 0.5); 
-  height: 660px;
-  background-position: center center;
-  background-size: cover;
-}
-
-
-@media (max-width: 768px) {
-  .home-header {
-    height: 500px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .ml-auto {
-    margin-left: auto;
-  }
-
-  .text-start {
-    text-align: center;
-  }
-
-  .banner-text {
-    text-align: center;
-    padding: 0 15px;
-  }
-  
-
-  .checkproduct {
-    height: 500px; 
-  }
-
-  .checkproduct .container {
-    align-items: center;
-  }
-
-  .checkproduct .banner-text {
-    text-align: center;
-  }
-
-  .intro-pic img,
-  .service-item img {
-    width: 100%; /* 讓圖片填滿父元素 */
-    height: auto;
-  }
-}
-</style>

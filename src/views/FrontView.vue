@@ -11,7 +11,9 @@ import FooterComponent from '../components/footerComponent.vue'
 
 export default{
 data(){
-
+return{
+    
+}
 },
 components:{
     NavbarComponent,

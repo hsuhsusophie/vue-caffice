@@ -1,0 +1,81 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+.wrapper{
+  max-width: 100%;
+}
+
+.home-header {
+  height: 860px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.intro-heading{
+  border-bottom: 2px solid #000; 
+  display: inline-block; 
+  padding-bottom: 5px;
+  margin-bottom: 10px; 
+}
+
+.check-banner-text{
+  opacity: 0.5;
+}
+
+.service-item img{
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+}
+
+.checkproduct{
+  background-image: url(../assets/pics/check.jpg);
+  background-color: rgba(255, 255, 255, 0.5); 
+  opacity: 0.5;
+  height: 660px;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+@media (max-width: 768px) {
+  .home-header {
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .text-start {
+    text-align: center;
+  }
+
+  .banner-text {
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+
+  .checkproduct {
+    height: 500px; 
+  }
+
+  .checkproduct .container {
+    align-items: center;
+  }
+
+  .checkproduct .banner-text {
+    text-align: center;
+    
+  }
+
+  .intro-pic img,
+  .service-item img {
+    width: 100%; /* 讓圖片填滿父元素 */
+    height: auto;
+  }
+}

@@ -39,17 +39,16 @@
     methods: {
       toggleNavbar() {
         this.$el.querySelector('.navbar-toggler').click();
-  
-      },
+      }
     },
   };
   </script>
   
 
 <style>
-.navbar{
+/* .navbar{
     max-width: 100%;
-}
+} */
 </style>
 
 
