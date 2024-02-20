@@ -11,7 +11,7 @@
           <ul class="category list-group text-center my-4 p-4 g-4">
             <li
               class="list-group-item list-group-item-action bg-light"
-              :class="{ active: isActive === 'All' }"
+              :class="{ active: isActive === 'All', clicked: isActive === 'All' }"
             >
               <a
                 class="px-3 px-md-4 py-1 text-dark"
@@ -23,7 +23,7 @@
             </li>
             <li
               class="list-group-item list-group-item-action"
-              :class="{ active: isActive === 'Coffee' }"
+              :class="{ active: isActive === 'Coffee', clicked: isActive === 'Coffee' }"
             >
               <a
                 class="px-3 px-md-4 py-1 text-dark"
@@ -35,7 +35,7 @@
             </li>
             <li
               class="list-group-item list-group-item-action text-dark"
-              :class="{ active: isActive === 'Non-coffee' }"
+              :class="{ active: isActive === 'Non-coffee', clicked: isActive === 'Non-coffee' }"
             >
               <a
                 class="px-3 px-md-4 py-1 text-dark"
@@ -47,7 +47,7 @@
             </li>
             <li
               class="list-group-item list-group-item-action text-dark"
-              :class="{ active: isActive === 'Bakery' }"
+              :class="{ active: isActive === 'Bakery', clicked: isActive === 'Bakery' }"
             >
               <a
                 class="px-3 px-md-4 py-1 text-dark"
@@ -132,4 +132,81 @@
     },
   };
   </script>
+  
+  <style>
+  .category {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    position: sticky;
+    top: 10%;
+  }
+  
+  .section {
+    min-height: 400px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    p {
+      z-index: 2;
+      font-weight: bold;
+    }
+  }
+  
+  .background-image {
+    background-image: url(../assets/pics/check.jpg);
+    opacity: 0.8;
+    padding-top: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  
+  .card-img-top {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .list-group-item {
+    border: none; /* 確保沒有邊框 */
+  }
+  
+  .list-group-item.active,
+  .list-group-item.clicked {
+    a {
+      color: #fff;
+    }
+  }
+  
+  .is-active,
+  .is-clicked {
+    a {
+      color: #fff;
+    }
+  }
+  
+  li a {
+    text-decoration: none;
+    display: flex;
+  }
+  </style>
   
