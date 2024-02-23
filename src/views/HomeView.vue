@@ -1,27 +1,8 @@
-<script>
-import imageUrl from '../assets/pics/banner.jpg';
-import AOS from 'Aos';
-import '@/assets/all.scss';
-import 'aos/dist/aos.css'
-export default {
-  data() {
-    return {
-      imageUrl: imageUrl,
-    }
-  },
-  mounted(){
-    AOS.init({
-      offset: 120
-    })
-  }
-}
-</script>
-
 <template>
   <div class="wrapper">
   <!-- banner -->
-  <header class="home-header my-4 p-4 w-100" :style="{ 'background-image': `url(${imageUrl})` }" data-aos="fade-down">
-    <div class="d-flex justify-content-end align-items-end h-100 w-100 ">
+  <header class="home-header my-4 p-4 w-100 " :style="{ 'background-image': `url(${imageUrl})` }" data-aos="fade-down">
+    <div class="d-flex container justify-content-end align-items-end h-100 w-100 ">
       <div class="ml-auto text-start banner-text" data-aos="fade-down">
         <h3 class="fw-bold text-light">Caffice</h3>
         <h1 class="text-white mb-2">品味生活，從一杯Caffice開始。</h1>
@@ -126,6 +107,25 @@ export default {
       </div>
     </div>
   </div>
-
 </div>
 </template>
+
+<script>
+import imageUrl from '../assets/pics/banner.jpg';
+import AOS from 'Aos';
+import '@/assets/all.scss';
+import 'aos/dist/aos.css'
+export default {
+  data() {
+    return {
+      imageUrl: imageUrl,
+    }
+  },
+  mounted(){
+    AOS.init({
+      offset: 120
+    })
+  }
+}
+</script>
+

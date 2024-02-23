@@ -23,10 +23,14 @@
               <router-link class="nav-link fs-5" to="/products">產品列表</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link fs-5" to="/cart">購物車</router-link>
+              <router-link class="nav-link fs-5" to="/cart"><i class="bi bi-cart-fill"></i></router-link>
             </li>
             <li>
-              <span class="badge bg-danger text-white"> 0</span>
+              <span
+                  class="position-absolute translate-middle bg-theme badge bg-danger text-white rounded-pill cart-number"
+                  v-if="cartNum"
+                  >{{ cartNum }}</span
+                >
             </li>
           </ul>
         </div>
@@ -36,12 +40,30 @@
   
   <script>
   export default {
+    data(){
+      return{
+        cart : [],
+
+      }
+    },
     methods: {
       toggleNavbar() {
         this.$el.querySelector('.navbar-toggler').click();
       }
     },
-  };
+    computed : {
+      cartNum() {
+      let num = 0;
+      if (this.cart.carts) {
+        this.cart.carts.forEach((cart) => {
+          num += cart.qty;
+        });
+    }
+    return num;
+  },
+    },
+  }
+
   </script>
   
 
