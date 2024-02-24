@@ -1,5 +1,6 @@
 <template>
-  <div class="product">
+  <div class="product px-5">
+    
     <div class="container">
       <LoadingOverlay :active="isLoading" />
       <div class="row product align-items-center">
@@ -45,6 +46,10 @@
           <p class="productcontent text-dark fs-6">{{product.content}}</p>
         </div>
       </div>
+    </div>
+
+    <div class="bottom">
+      
     </div>
   </div>
 </template>

@@ -1,8 +1,7 @@
 
-
+ 
 .product{
-   position: relative;
-   min-height: 100vh;
+   margin-top: 100px;
 }
 
 .product-img{
@@ -21,4 +20,9 @@ object-fit: cover;
    border-left: 3px solid #000000A6;
    padding-left: 10px;
    display: inline-block;
+}
+
+.bottom{
+   height: 100px;
+
 }

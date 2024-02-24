@@ -67,11 +67,11 @@
 
 
  <!--Service-->
-<div class="service bg-light mt-5 mb-5  mb-0">
+<div class="service bg-light ">
   <div class="d-flex  service justify-content-center align-items-center ">
     <h2 class="section-title  align-items-center  mt-4 mb-2" data-aos="fade-down">Our Service</h2>
   </div>
-  <div class="row text-center mb-5">
+  <div class="row text-center">
     <div class="col-md-4 mb-4">
       <div class="service-item">
         <img src="../assets/pics/service.jpg" data-aos="fade-down" alt="Cozy Environment Image">

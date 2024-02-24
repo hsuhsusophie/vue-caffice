@@ -2,9 +2,9 @@
   <div class="products">
     <LoadingOverlay :active="isLoading" />
 
-    <!-- <div class="section">
-      <div class="background-image background-image--products"></div>
-    </div> -->
+    <div class="section">
+      <div class="background-image w-100"></div>
+    </div>
 
     <div class="row">
       <div class="col-md-3">
