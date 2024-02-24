@@ -1,15 +1,15 @@
 <template>
-  <div class="product px-5">
+  <div class="product px-3">
     
     <div class="container">
       <LoadingOverlay :active="isLoading" />
       <div class="row product align-items-center">
-        <div class="col-md-7">
+        <div class="col-md-7 col-12 mb-3">
           <div class="carousel-item active">
             <img :src="product.imageUrl" class="product-img py-2 w-100" alt="" />
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 col-12 mb-3">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-white px-0 mb-0 py-3">
               <li class="breadcrumb-item">
@@ -38,8 +38,9 @@
       </div>
     </div>
     <div>
-      <div class="row my-5 px-5 mx-0">
-        <div class="col-md-7">
+      <div class="container">
+      <div class="row my-3 px-3">
+        <div class="col-md-7 col-12 mb-3">
           <p class="productcontent">{{product.description}}</p>
         </div>
         <div class="col-md-5">
@@ -47,11 +48,12 @@
         </div>
       </div>
     </div>
-
+  </div>
     <div class="bottom">
       
     </div>
   </div>
+
 </template>
 
 <script>
