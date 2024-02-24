@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="products">
     <LoadingOverlay :active="isLoading" />
 
     <!-- <div class="section">

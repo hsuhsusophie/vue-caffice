@@ -7,3 +7,15 @@
       </p>
     </footer>
   </template>
+
+  <style>
+  footer {
+  padding-top: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box; 
+}
+
+  </style>
