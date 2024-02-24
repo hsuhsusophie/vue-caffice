@@ -28,6 +28,11 @@
   object-fit: cover;
   width: 400px;
   height: 400px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.service-item img:hover{
+  transform: scale(1.1);
 }
 
 .checkproduct{

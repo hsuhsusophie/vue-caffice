@@ -2,7 +2,7 @@
   <div class="product">
     <div class="container">
       <LoadingOverlay :active="isLoading" />
-      <div class="row product align-items-center px-4 my-4 p-4 m">
+      <div class="row product align-items-center">
         <div class="col-md-7">
           <div class="carousel-item active">
             <img :src="product.imageUrl" class="product-img py-2 w-100" alt="" />

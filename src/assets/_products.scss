@@ -54,10 +54,13 @@
     object-fit: cover;
     width: 300px;
     height: 300px;
+    transition: transform 0.3s ease-in-out; 
 
 }
 
-
+.card-img-top:hover{
+transform: scale(1.1);
+}
 
 .list-group-item.active {
   border: none;
