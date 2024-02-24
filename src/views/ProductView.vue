@@ -3,16 +3,15 @@
     <img :src="product.imageUrl" alt=""> -->
     <div>
       <LoadingOverlay :active="isLoading" />
-        <div class="row align-items-center px-5 my-4 p-4">
+        <div class="row product align-items-center px-4 my-4 p-4 m">
         <div class="col-md-7">
             <div class="carousel-item active">
                 <img
                     :src="product.imageUrl"
-                    class="product-img"
+                    class="product-img py-2 w-100"
                     alt=""
                   />                    
           </div>
-        
         </div>
         <div class="col-md-5">
           <nav aria-label="breadcrumb">
@@ -24,16 +23,16 @@
           </nav>
           <h2 class="fw-bold h1 mb-2">{{product.title}}</h2>
           <p class="h4 fw-bold text-end mb-2">NT${{ product.price }}</p>
-          <div class="row align-items-center">
-         
+          <div class="row align-items-center">        
             <div class="col-6">
               <a href="./checkout.html" class="text-nowrap btn btn-dark w-100 py-2 mt-2"  @click.prevent="addToCart(product)">加入購物車
-
               </a>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div>
       <div class="row my-5 px-5">
         <div class="col-md-4">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
