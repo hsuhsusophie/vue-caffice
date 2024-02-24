@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
 
 .container{
-  width: auto;
+  width: 100%; 
 }
 
 .home-header {
@@ -39,29 +39,65 @@
 }
 
 
+// @media (max-width: 768px) {
+//   .home-header {
+//     height: 500px;
+//     background-position: center center;
+//     background-size: cover;
+//   }
+
+//   .ml-auto {
+//     margin-left: auto;
+//   }
+
+//   .text-start {
+//     text-align: center;
+//   }
+
+//   .banner-text {
+//     text-align: center;
+//     padding: 0 15px;
+//   }
+  
+
+//   .checkproduct {
+//     height: 500px; 
+//   }
+
+//   .checkproduct .container {
+//     align-items: center;
+//   }
+
+//   .checkproduct .banner-text {
+//     text-align: center;
+    
+//   }
+
+//   .intro-pic img,
+//   .service-item img {
+//     width: 100%; /* 讓圖片填滿父元素 */
+//     height: auto;
+//   }
+// }
+
 @media (max-width: 768px) {
   .home-header {
-    height: 500px;
-    background-position: center center;
-    background-size: cover;
+    height: 300px; /* 调整高度 */
   }
 
-  .ml-auto {
-    margin-left: auto;
-  }
-
-  .text-start {
-    text-align: center;
+  .intro-heading {
+    text-align: center; /* 居中文字 */
+    margin: 10px 0; /* 调整间距 */
   }
 
   .banner-text {
     text-align: center;
     padding: 0 15px;
   }
-  
 
   .checkproduct {
-    height: 500px; 
+    height: 300px; /* 调整高度 */
+    opacity: 0.8;
   }
 
   .checkproduct .container {
@@ -70,12 +106,12 @@
 
   .checkproduct .banner-text {
     text-align: center;
-    
   }
 
   .intro-pic img,
   .service-item img {
-    width: 100%; /* 讓圖片填滿父元素 */
+    width: 100%; /* 让图片填满父元素 */
     height: auto;
+    max-width: 100%; /* 确保不超过父元素宽度 */
   }
 }
