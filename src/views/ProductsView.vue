@@ -95,6 +95,7 @@
 <script>
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env;
 
+
 export default {
   data() {
     return {
@@ -131,7 +132,7 @@ export default {
       }
 
       this.$http
-      .post(`${VITE_APP_URL}v2/api/${VITE_APP_PATH}/cart`, {data : order})
+      .post(`${VITE_APP_URL}/v2/api/${VITE_APP_PATH}/cart`, {data : order})
       .then((res) => {
         console.log(res);
         this.product = res.data.product;

@@ -23,14 +23,15 @@
               <router-link class="nav-link fs-5" to="/products">產品列表</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link fs-5" to="/cart"><i class="bi bi-cart-fill"></i></router-link>
+              <router-link class="nav-link fs-5 btn btn position-relative" to="/cart"><i class="bi bi-cart"></i>
+                <span class="position-absolute 
+                 badge rounded-pill bg-dark">
+                {{ carts?.length}}
+                <span class="visually-hidden">unread messages</span>
+                </span>
+              </router-link>
             </li>
             <li>
-              <span
-                  class="position-absolute translate-middle bg-theme badge bg-danger text-white rounded-pill cart-number"
-                  v-if="cartNum"
-                  >{{ cartNum }}</span
-                >
             </li>
           </ul>
         </div>
@@ -39,30 +40,27 @@
   </template>
   
   <script>
-  export default {
-    data(){
-      return{
-        cart : [],
+ import { mapActions, mapState } from 'pinia';
+ import cartStore from '../stores/cartStore';
 
-      }
+  export default {
+   computed:{
+    ...mapState(cartStore,['carts'] ),
+   
     },
     methods: {
       toggleNavbar() {
         this.$el.querySelector('.navbar-toggler').click();
-      }
+      },
+      ...mapActions(cartStore, ['getCart']),
     },
-    computed : {
-      cartNum() {
-      let num = 0;
-      if (this.cart.carts) {
-        this.cart.carts.forEach((cart) => {
-          num += cart.qty;
-        });
+    mounted(){
+      console.log(this.$route);
+      this.getCart();
     }
-    return num;
-  },
-    },
-  }
+    }
+  
+    
 
   </script>
   

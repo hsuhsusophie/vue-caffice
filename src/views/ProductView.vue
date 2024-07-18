@@ -6,7 +6,7 @@
       <div class="row product align-items-center">
         <div class="col-md-7 col-12 mb-3">
           <div class="carousel-item active">
-            <img :src="product.imageUrl" class="product-img py-2 w-100" alt="" />
+            <img :src="product.imageUrl" class="product-img py-2 w-100 object-fit-cover" alt="" />
           </div>
         </div>
         <div class="col-md-5 col-12 mb-3">
@@ -29,7 +29,7 @@
           <p class="h4 fw-bold text-end mb-2">NT${{ product.price }}</p>
           <div class="row align-items-center">
             <div class="col-6">
-              <a href="#" class="text-nowrap btn btn-dark w-100 py-2 mt-2" @click.prevent="addToCart(product)">
+              <a href="#" class="text-nowrap btn btn-dark w-100 py-2 mt-2" @click.prevent="addToCart(product.id)">
                 加入購物車
               </a>
             </div>
@@ -57,6 +57,10 @@
 </template>
 
 <script>
+import axios from 'axios';
+import { mapActions } from 'pinia';
+import cartStore from '@/stores/cartStore';
+
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env;
 
 export default {
@@ -70,22 +74,18 @@ export default {
   methods: {
     getProduct() {
       const { id } = this.$route.params;
-      this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/product/${id}`).then((response) => {
+      axios.get(`${VITE_APP_URL}/v2/api/${VITE_APP_PATH}/product/${id}`)
+      .then((response) => {
         this.product = response.data.product;
         this.isLoading = false;
       });
     },
-    addToCart() {
-      const order = {
-        product_id: this.product.id,
-        qty: 1,
-      };
-      this.$http.post(`${VITE_APP_URL}v2/api/${VITE_APP_PATH}/cart`, { data: order }).then((res) => {
-        this.product = res.data.product;
-      });
-    },
+    ...mapActions(cartStore, {
+      addToCart: 'addToCart',
+    }),
   },
   mounted() {
+    console.log(this.route);
     this.getProduct();
   },
 };
